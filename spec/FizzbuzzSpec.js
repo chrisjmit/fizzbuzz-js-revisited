@@ -13,6 +13,10 @@ describe("Fizzbuzz", function() {
     expect(fizzbuzz.says(5)).toEqual("Buzz");
   });
 
+  it("should say fizzbuzz when 15 is passed", function() {
+    expect(fizzbuzz.says(15)).toEqual("Fizzbuzz");
+  });
+
   it("should accept only numbers", function() {
     expect(function() { fizzbuzz.says("hello"); }).toThrowError("Says needs a number");
   });
