@@ -17,7 +17,7 @@ Fizzbuzz.prototype.says = function(number) {
 };
 
 Fizzbuzz.prototype.numberCheck = function(number) {
-  if (number === "hello") {
+  if (typeof number !== 'number') {
     throw new Error ("Says needs a number");
   }
 };
