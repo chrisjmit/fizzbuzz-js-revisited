@@ -13,8 +13,13 @@ describe("Fizzbuzz", function() {
     expect(fizzbuzz.says(5)).toEqual("Buzz");
   });
 
+  it("should accept only numbers", function() {
+    expect(function() { fizzbuzz.says("hello"); }).toThrowError("Says needs a number");
+  });
+
   it("should return the number if not divisible by 3 or 5", function () {
     expect(fizzbuzz.says(7)).toEqual(7);
   });
+
 
 });
